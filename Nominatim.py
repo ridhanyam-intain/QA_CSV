@@ -59,8 +59,8 @@ BATCH_SIZE = 10
 OUTPUT_FILE = f'data_with_areas_{START_INDEX}_{END_INDEX}.csv'
 
 # Create empty columns for areas
-data['Restaurant_area'] = None
-data['Delivery_area'] = None
+data['Restaurant_address'] = None
+data['Delivery_address'] = None
 
 # Check if output file exists and load previous progress
 if os.path.exists(OUTPUT_FILE):
@@ -83,23 +83,23 @@ for i in tqdm(range(last_processed, len(data), BATCH_SIZE)):
     for idx, row in batch.iterrows():
         # Validate restaurant coordinates
         if is_valid_coordinates(row['Restaurant_latitude'], row['Restaurant_longitude']):
-            batch.at[idx, 'Restaurant_area'] = get_address(
+            batch.at[idx, 'Restaurant_address'] = get_address(
                 row['Restaurant_latitude'], 
                 row['Restaurant_longitude']
             )
             time.sleep(1.1)
         else:
-            batch.at[idx, 'Restaurant_area'] = None
+            batch.at[idx, 'Restaurant_address'] = None
         
         # Validate delivery coordinates
         if is_valid_coordinates(row['Delivery_location_latitude'], row['Delivery_location_longitude']):
-            batch.at[idx, 'Delivery_area'] = get_address(
+            batch.at[idx, 'Delivery_address'] = get_address(
                 row['Delivery_location_latitude'], 
                 row['Delivery_location_longitude']
             )
             time.sleep(1.1)
         else:
-            batch.at[idx, 'Delivery_area'] = None
+            batch.at[idx, 'Delivery_address'] = None
     
     # Append this batch to the CSV file
     batch.to_csv(OUTPUT_FILE, mode='a', header=False, index=False)

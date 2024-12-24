@@ -30,7 +30,12 @@ config_data = load_yaml('./config.yaml')
 os.environ["OPENAI_API_KEY"] = config_data["OPENAI_API_KEY"]
 
 # Path to the CSV file
-csv_file_path = "combined_data.csv"        
+csv_file_path = "data_with_address.csv"
+
+# csv_file_path = "combined_data.csv"     
+# csv_file_path = "data.csv"
+# csv_file_path = "modelling_data.csv"
+
 
 # Load CSV data into a Pandas DataFrame
 df = pd.read_csv(csv_file_path)

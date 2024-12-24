@@ -62,6 +62,9 @@ A: Analysis of major cities shows:
 - Coimbatore: 665 deliveries
 - Chennai: 652 deliveries
 
+**Q: What is the average number of orders per day in Chennai?**
+A: The analysis shows that Chennai handles an average of 15.5 orders per day.
+
 **Q: Which areas have the highest delivery density?**  
 A: The areas with the highest delivery density are:
 1. Chennai, Tamil Nadu (600001): 153 deliveries
