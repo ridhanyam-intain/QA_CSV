@@ -2,17 +2,14 @@ import os
 import logging
 from dotenv import load_dotenv
 from langchain_experimental.agents import create_pandas_dataframe_agent
-# from langchain_community.chat_models import ChatOpenAI
 from langchain_openai import ChatOpenAI
-from deep_translator import GoogleTranslator
 import pandas as pd
 import yaml
 import re
 from langchain.agents import Tool
 from langchain_experimental.tools import PythonREPLTool
-# import matplotlib.pyplot as plt
-# import seaborn as sns
 import plotly.express as px
+import plotly.graph_objects as go
 from langchain.agents import AgentType
 
 # Load API keys from config
@@ -31,13 +28,14 @@ config_data = load_yaml('./config.yaml')
 os.environ["OPENAI_API_KEY"] = config_data["OPENAI_API_KEY"]
 
 # Path to the CSV file
-csv_file_path = "combined_data.csv"
+csv_file_path = "combined_data.csv"        
 # csv_file_path = "data.csv"
+# csv_file_path = "modelling_data.csv"
 
 # Load CSV data into a Pandas DataFrame
 df = pd.read_csv(csv_file_path)
 # print(df.head(5))
-print(df.columns)
+# print(df.columns)
 # print(df.info())
 
 # Step 1: Initialize the LLM with better parameters
@@ -58,7 +56,7 @@ prompt = """
         - Combine results for a coherent response.
     The DataFrame contains the following columns: {columns}.
     Note:
-        - For data visualization, use only plotly.
+        - For data visualization, use only plotly express or plotly graph objects.
         - If you cannot find the information in the DataFrame, say so explicitly otherwise heavily penalized."""
 
 agent = create_pandas_dataframe_agent(
@@ -88,7 +86,7 @@ logging.basicConfig(
     format='%(asctime)s - %(levelname)s - %(message)s'
 )
 
-def ask_dataframe_agent(user_question, target_lang="en"):
+def ask_dataframe_agent(user_question):
     """
     Enhanced version of ask_dataframe_agent with better error handling and response processing
     """
@@ -104,22 +102,8 @@ def ask_dataframe_agent(user_question, target_lang="en"):
             
         # Get response
         response = agent.invoke({"input": cleaned_question})
-        # response = agent.run(cleaned_question)
-        
         response = response['output']
         
-        # Post-process response
-        # response = format_response(response)
-        
-        # Translate if needed
-        if target_lang != "en":
-            try:
-                translator = GoogleTranslator(source='en', target=target_lang)
-                response = translator.translate(text=response)
-            except Exception as e:
-                logging.error(f"Translation error: {e}")
-                return "Translation error occurred"
-                
         return response
         
     except Exception as e:
@@ -141,7 +125,6 @@ def format_response(response: str) -> str:
     response = re.sub(r'\d+\.\d+', lambda x: f"{float(x.group()):.2f}", response)
     return response.strip()
 
-# Example usage
 if __name__ == "__main__":
     logging.info("Application started")
     print("Welcome to the Chatbot !!")
@@ -154,13 +137,3 @@ if __name__ == "__main__":
         response = ask_dataframe_agent(user_question)
         print(response)
 
-
-
-# When providing numerical answers, round to 2 decimal places.
-#     Always provide clear, concise responses based on the actual data.
-#     If analyzing trends or patterns, focus on actionable insights from the real data.
-#     For location-based queries, consider both the restaurant and delivery areas.
-#     For complex calculations, use the Python_REPL tool.
-#     For data visualization, use only plotly.
-#     If you cannot find the information in the DataFrame, say so explicitly otherwise heavily penalized.
-#     If needed, you can create new columns in the DataFrame for your analysis.

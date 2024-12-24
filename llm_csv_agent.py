@@ -127,3 +127,14 @@ if __name__ == "__main__":
             logging.info("Application terminated by user")
             break
         ask_csv_agent(user_question)
+
+
+
+# When providing numerical answers, round to 2 decimal places.
+#     Always provide clear, concise responses based on the actual data.
+#     If analyzing trends or patterns, focus on actionable insights from the real data.
+#     For location-based queries, consider both the restaurant and delivery areas.
+#     For complex calculations, use the Python_REPL tool.
+#     For data visualization, use only plotly.
+#     If you cannot find the information in the DataFrame, say so explicitly otherwise heavily penalized.
+#     If needed, you can create new columns in the DataFrame for your analysis.
