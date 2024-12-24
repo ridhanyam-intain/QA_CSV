@@ -1,0 +1,118 @@
+2024-12-23 19:48:54,481 - INFO - Application started
+2024-12-23 19:49:23,332 - INFO - Cache miss for query: Answer this query based on the CSV file data only: what is the average age of the delivery person'
+2024-12-23 19:49:24,076 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-12-23 19:49:26,709 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-12-23 19:49:28,680 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-12-23 19:49:31,886 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-12-23 19:49:34,503 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-12-23 19:50:40,941 - INFO - Cache miss for query: Answer this query based on the CSV file data only: What is the averange distance between restaurant and delivery location?
+2024-12-23 19:50:42,026 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-12-23 19:50:48,302 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-12-23 19:50:54,903 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-12-23 19:51:00,813 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-12-23 19:51:08,985 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-12-23 19:51:17,923 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-12-23 19:51:23,074 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-12-23 19:51:29,039 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-12-23 19:51:37,408 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-12-23 19:51:44,200 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-12-23 19:51:53,907 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-12-23 19:51:59,902 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-12-23 19:52:06,219 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-12-23 19:52:15,991 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-12-23 19:52:22,209 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-12-23 19:52:28,659 - INFO - Cache miss for query: Answer this query based on the CSV file data only: 
+2024-12-23 19:52:29,184 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-12-23 19:52:30,036 - ERROR - Could not process your query: An output parsing error occurred. In order to pass this error back to the agent and have it try again, pass `handle_parsing_errors=True` to the AgentExecutor. This is the error: Could not parse LLM output: `Please provide the query you would like me to answer based on the CSV file data.`
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/OUTPUT_PARSING_FAILURE 
+2024-12-23 19:52:30,038 - INFO - Cache miss for query: Answer this query based on the CSV file data only: 
+2024-12-23 19:52:30,600 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-12-23 19:52:30,848 - ERROR - Could not process your query: An output parsing error occurred. In order to pass this error back to the agent and have it try again, pass `handle_parsing_errors=True` to the AgentExecutor. This is the error: Could not parse LLM output: `Please provide the query you would like me to answer based on the CSV file data.`
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/OUTPUT_PARSING_FAILURE 
+2024-12-23 20:59:41,524 - INFO - Cache miss for query: Answer this query based on the CSV file data only: how many records are ther
+2024-12-23 20:59:42,450 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-12-23 20:59:44,811 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-12-23 21:00:51,066 - INFO - Application started
+2024-12-23 21:01:43,274 - INFO - Application started
+2024-12-23 21:01:49,730 - INFO - Cache miss for query: num of records
+2024-12-23 21:01:50,777 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-12-23 21:01:51,449 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-12-23 21:02:30,690 - INFO - Cache miss for query: averange age of employee
+2024-12-23 21:02:31,477 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-12-23 21:02:32,727 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-12-23 21:02:43,864 - INFO - Cache miss for query: what is the data about?
+2024-12-23 21:02:44,396 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-12-23 21:03:09,267 - INFO - Cache miss for query: average time taken for dekivery (round to 2 decimal places)
+2024-12-23 21:03:10,043 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-12-23 21:03:25,524 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-12-23 21:03:43,876 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-12-23 21:03:44,100 - INFO - Cache miss for query: 
+2024-12-23 21:03:44,580 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-12-23 21:03:57,500 - INFO - Cache miss for query: how many delivery in Urban
+2024-12-23 21:03:58,354 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-12-23 21:03:59,394 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-12-23 21:04:28,313 - INFO - Cache miss for query: Average distance covered by employee per day (round to 2 decimal places)
+2024-12-23 21:04:29,069 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-12-23 21:04:46,904 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-12-23 21:05:05,283 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-12-23 21:05:17,935 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-12-23 21:05:27,993 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-12-23 21:05:36,959 - ERROR - Error processing question: Got unsupported early_stopping_method `generate`
+2024-12-23 21:07:22,966 - INFO - Application started
+2024-12-23 21:07:28,961 - INFO - Cache miss for query: Average distance covered by employee per day (round to 2 decimal places)
+2024-12-23 21:07:29,757 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-12-23 21:07:41,457 - WARNING - Python REPL can execute arbitrary code. Use with caution.
+2024-12-23 21:07:42,117 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-12-23 21:11:18,572 - INFO - Application started
+2024-12-23 21:11:42,558 - INFO - Cache miss for query: compare the sales in urban and metropolitical city
+2024-12-23 21:11:43,311 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-12-23 21:11:48,974 - WARNING - Python REPL can execute arbitrary code. Use with caution.
+2024-12-23 21:11:49,573 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-12-23 21:11:57,587 - INFO - Cache miss for query: visualize
+2024-12-23 21:11:58,224 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-12-23 21:14:19,300 - INFO - Application started
+2024-12-23 21:14:23,050 - INFO - Cache miss for query: Using ONLY the data from the CSV file, compare the sales in urban and metropolitical city
+2024-12-23 21:14:23,734 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-12-23 21:14:26,750 - WARNING - Python REPL can execute arbitrary code. Use with caution.
+2024-12-23 21:14:27,328 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-12-23 21:14:30,412 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-12-23 21:14:33,400 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-12-23 21:14:36,506 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-12-23 21:14:38,699 - ERROR - Error processing question: Got unsupported early_stopping_method `generate`
+2024-12-23 21:16:34,527 - INFO - Application started
+2024-12-23 21:16:36,965 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-12-23 21:16:40,382 - WARNING - Python REPL can execute arbitrary code. Use with caution.
+2024-12-23 21:16:41,005 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-12-23 21:16:43,074 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-12-23 21:16:47,374 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-12-23 21:16:51,530 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-12-23 21:16:55,107 - ERROR - Error processing question: Got unsupported early_stopping_method `generate`
+2024-12-23 21:17:35,757 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-12-23 21:17:36,523 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-12-23 21:17:47,257 - INFO - Application started
+2024-12-23 21:17:50,088 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-12-23 21:17:50,328 - WARNING - Python REPL can execute arbitrary code. Use with caution.
+2024-12-23 21:17:50,928 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-12-23 21:18:15,691 - INFO - Application started
+2024-12-23 21:18:17,906 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-12-23 21:18:18,105 - WARNING - Python REPL can execute arbitrary code. Use with caution.
+2024-12-23 21:18:18,818 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-12-23 21:21:09,736 - INFO - Application started
+2024-12-23 21:21:12,391 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-12-23 21:21:12,543 - WARNING - Python REPL can execute arbitrary code. Use with caution.
+2024-12-23 21:21:13,163 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-12-23 21:21:55,855 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-12-23 21:21:56,780 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-12-23 21:22:52,918 - INFO - Application started
+2024-12-23 21:22:57,139 - INFO - Cache miss for query: number of records
+2024-12-23 21:22:58,029 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-12-23 21:22:58,175 - WARNING - Python REPL can execute arbitrary code. Use with caution.
+2024-12-23 21:22:58,785 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-12-23 21:56:15,168 - INFO - Application started
+2024-12-23 21:56:17,346 - INFO - Cache miss for query: number of records
+2024-12-23 21:56:18,436 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-12-23 21:56:19,167 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-12-23 22:00:53,917 - INFO - Cache miss for query: compare the sales in urban and metropolitical city
+2024-12-23 22:00:54,679 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-12-23 22:01:17,327 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-12-23 22:01:20,417 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
