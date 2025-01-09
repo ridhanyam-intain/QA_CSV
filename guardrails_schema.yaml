@@ -1,0 +1,21 @@
+output_schema:
+  type: object
+  properties:
+    answer:
+      type: string
+      description: "The main answer to the user's question."
+    confidence:
+      type: number
+      description: "Confidence score between 0 and 1."
+      minimum: 0
+      maximum: 1
+    visualization:
+      type: string
+      format: uri
+      description: "URL to visualization if generated."
+    error:
+      type: string
+      description: "Error message if any issues occur."
+  required:
+    - answer
+    - confidence
