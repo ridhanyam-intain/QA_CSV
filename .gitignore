@@ -1,0 +1,7 @@
+#ignore config.yaml file
+config.yaml
+# all csv files
+*.csv
+
+#ignore .env file
+.env

@@ -12,7 +12,9 @@ import plotly.express as px
 import plotly.graph_objects as go
 from langchain.agents import AgentType
 from openai import OpenAI
-from guardrails import Guard
+import guardrails as gd
+from guardrails.hub import RestrictToTopic
+from guardrails.errors import ValidationError
 
 # Load API keys from config
 def load_yaml(file_path):
@@ -30,21 +32,13 @@ config_data = load_yaml('./config.yaml')
 os.environ["OPENAI_API_KEY"] = config_data["OPENAI_API_KEY"]
 
 # Path to the CSV file
-csv_file_path = "data_with_address.csv"
-
-# csv_file_path = "combined_data.csv"     
-# csv_file_path = "data.csv"
-# csv_file_path = "modelling_data.csv"
-
+csv_file_path = "combined_data_v6.csv"     
 # Load CSV data into a Pandas DataFrame
 df = pd.read_csv(csv_file_path)
-# print(df.head(5))
-# print(df.columns)
-# print(df.info())
 
 # Step 1: Initialize the LLM with better parameters
 llm = ChatOpenAI(
-    model="gpt-4o",  # Latest GPT-4 model
+    model="gpt-4",  # Latest GPT-4 model
     temperature=0,  # Lower temperature for more consistent responses
     request_timeout=120,  # Increased timeout for complex queries
 )
@@ -97,38 +91,48 @@ client = OpenAI(
 
 def ask_dataframe_agent(user_question):
     """
-    Enhanced version of ask_dataframe_agent with Guardrails validation
+    Enhanced version with Guardrails
     """
     try:
         # Pre-process the question
         cleaned_question = user_question.strip().replace("\n", " ")
         
-        if not validate_question(cleaned_question):
-            return "Sorry, this question contains forbidden operations."
-        
         # Add explicit instruction to use DataFrame data
-        cleaned_question = f"Using ONLY the data from the DataFrame, {cleaned_question}"
-            
-        # Get raw response from the agent
-        raw_response = agent.invoke({"input": cleaned_question})
-        response_text = raw_response['output']
+        cleaned_question_with_instructions = f"Using ONLY the data from the DataFrame, {cleaned_question}"
 
+        # Get response from the agent
+        raw_response = agent.invoke({"input": cleaned_question_with_instructions})
+        llm_output = raw_response['output']  # This is the actual LLM output
+        # print("LLM Output: ", llm_output)
+        
+        # Validate topic using Guardrails
+        guard = gd.Guard.for_string(
+            validators=[
+                RestrictToTopic(
+                    valid_topics=["finance", "delivery", "restaurant"],
+                    invalid_topics=["phone", "tablet", "sports", "politics"],
+                    device=-1,
+                    llm_callable="gpt-3.5-turbo",
+                    disable_classifier=False,
+                    disable_llm=False,
+                    on_fail="exception",
+                )
+            ]
+        )
+        
+        # Validate the LLM output's topic
         try:
-            # Create guard with schema
-            guard = Guard.fetch_guard("./guardrails_schema.yaml")
-            # Validate response
-            validated_response = guard.parse(response_text)
-            response = validated_response.answer
-        except Exception as e:
-            # If guardrails validation fails, use the raw response
-            logging.warning(f"Guardrails validation failed: {e}")
-            response = response_text
-                
-        return response
+            guard.parse(llm_output=llm_output)
+            print("Topic validation passed")
+        except ValidationError as e:
+            print("Topic validation failed")
+            logging.warning(f"Topic validation failed: {e}")
+            return "Sorry, your question appears to be outside the scope of our supported topics. Please ask questions related to finance, delivery, or restaurant data."
+        
+        return llm_output
         
     except Exception as e:
         logging.error(f"Error processing question: {e}")
-        print(e)
         return f"Sorry, I encountered an error: {str(e)}"
 
 # Add these functions for more capabilities
@@ -188,4 +192,3 @@ if __name__ == "__main__":
             break
         response = ask_dataframe_agent(user_question)
         print(response)
-

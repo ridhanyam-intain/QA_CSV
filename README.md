@@ -11,6 +11,26 @@ conda env create -f environment.yml
 python pandas_dataframe_agent.py
 ```
 
+## Guardrails Setup
+
+1. Install Guardrails:
+```bash
+pip install git+https://github.com/guardrails-ai/guardrails.git
+```
+
+2. Configure Guardrails:
+```bash
+guardrails configure
+```
+
+3. Get your API key from [Guardrails Hub](https://hub.guardrailsai.com/keys)
+
+4. Install required guards:
+```bash
+guardrails hub install hub://guardrails/valid_sql --quiet
+guardrails hub install hub://tryolabs/restricttotopic --quiet
+```
+
 ## Sample Questions and Answers
 
 ### Dataset Overview

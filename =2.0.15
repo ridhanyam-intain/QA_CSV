@@ -1,0 +1,18 @@
+Collecting guardrails>=2.0.0 (from guardrails[all]>=2.0.0)
+  Downloading guardrails-2.0.0-py3-none-any.whl.metadata (8.4 kB)
+Collecting codecov
+  Downloading codecov-2.1.13-py2.py3-none-any.whl.metadata (1.3 kB)
+Collecting mutmut==1.5.1 (from guardrails>=2.0.0->guardrails[all]>=2.0.0)
+  Downloading mutmut-1.5.1.tar.gz (24 kB)
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+INFO: pip is looking at multiple versions of guardrails to determine which version is compatible with other requirements. This could take a while.
+
+The conflict is caused by:
+    The user requested codecov
+    guardrails 2.0.0 depends on codecov==2.0.15
+
+To fix this you could try to:
+1. loosen the range of package versions you've specified
+2. remove package versions to allow pip to attempt to solve the dependency conflict
+
