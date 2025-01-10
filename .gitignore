@@ -5,3 +5,5 @@ config.yaml
 
 #ignore .env file
 .env
+
+*.log
